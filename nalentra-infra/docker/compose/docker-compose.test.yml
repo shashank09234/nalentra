@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  backend:
+    environment:
+      SPRING_PROFILES_ACTIVE: test
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:nalentra_test;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  frontend:
+    environment:
+      VITE_ENABLE_MOCKS: "true"

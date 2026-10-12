@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgres:
+    ports: [] # Close local postgres port from external mapping in prod context
+
+  redis:
+    ports: []
+
+  rabbitmq:
+    ports:
+      - "15672:15672" # Open management console only
+
+  minio:
+    ports: []
+
+  backend:
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+    ports: [] # Proxied by Nginx only
+
+  frontend:
+    ports:
+      - "80:80"

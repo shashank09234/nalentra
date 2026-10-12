@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      LOGGING_LEVEL_COM_NALENTRA: DEBUG
+    volumes:
+      - ../../../nalentra-backend/boot/src/main/resources:/app/resources
+
+  frontend:
+    build:
+      context: ../../../nalentra-frontend
+      dockerfile: Dockerfile
+      # Vite HMR options can be configured here
+    volumes:
+      - ../../../nalentra-frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:80"

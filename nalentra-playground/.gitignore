@@ -1,0 +1,32 @@
+# OS Specific Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python environment overrides & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.ipynb_checkpoints/
+
+# Node environment packages
+node_modules/
+dist/
+out/
+
+# Java compiled items
+*.class
+build/
+bin/
+target/
+
+# Local credentials
+.env
+.env.local
+*.pem
+*.key
+credentials.json

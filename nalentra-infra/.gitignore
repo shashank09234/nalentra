@@ -1,0 +1,39 @@
+# Local Environment Variables
+.env
+.env.local
+*.env
+
+# Local credentials & keys
+*.pem
+*.key
+*.pub
+certs/
+secrets/
+kubeconfig*
+
+# Terraform local configurations & caches
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+
+# Packer logs
+crash.log
+
+# Vagrant folders
+.vagrant/
+
+# Docker build logs
+*.log
+docker-compose.override.yml
+
+# OS Specific Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.idea/
+.vscode/
